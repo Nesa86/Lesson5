@@ -3,10 +3,19 @@ package optional;
 public class TeaMaker {
 
 	/* Figure out how to make a cup of tea using the classes below */
+	public static void main(String[] args) {
 
+		Kettle ket = new Kettle();
+		ket.getWater();
+		ket.boil();
+		TeaBag teabag = new TeaBag(TeaBag.MINT);
+		Cup cup = new Cup();
+		cup.makeTea(teabag, ket.getWater());
+
+	}
 }
 
-class TeaBag {
+ class TeaBag {
 
 	public final static String GREEN = "Green";
 	public final static String MINT = "Mint";
@@ -50,10 +59,7 @@ class Kettle {
 
 class Cup {
 
-	private TeaBag teabag;
-
 	void makeTea(TeaBag teabag, Kettle.Water hotWater) {
-		this.teabag = teabag;
 		if (hotWater.isHot())
 			System.out.println("Making hot " + teabag.getFlavor() + " tea.");
 		else
@@ -61,5 +67,3 @@ class Cup {
 	}
 
 }
-
-

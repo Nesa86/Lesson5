@@ -34,13 +34,13 @@ public class Cat {
 		/* Do the following things without changing the Cat class */
 
 		// 1. Make the Cat meow
-		
+		Cat cl = new Cat("Tiger");
+		cl.meow();
 		// 2. Get the Cat to print it's name
-
+		cl.printName();
 		// 3. Kill the Cat!
+		cl.kill();
+		
 
 	}
 }
-
-
-
